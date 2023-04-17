@@ -12,4 +12,4 @@ reshka = 0 # количество поворотов решек, для орло
 for i in range(len(coins_side)):
     if coins_side[i] == 0: orel += 1
     elif coins_side[i] == 1: reshka += 1
-print("Переверните: ", min(orel,reshka), " для выполнения задачи.")
+print("Переверните следующее количество монет: ", min(orel,reshka), " для выполнения задачи.")

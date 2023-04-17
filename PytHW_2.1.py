@@ -5,13 +5,11 @@
 import random
 
 n_coins = int(input("Укажите количество монет на столе: ")) 
-what_side = [random.randint(0, 1) for i in range(n_coins)] # условно обозначаем 0 - орлом, а 1 - решкой, и произвольно "рассыпаем их"
-print(what_side)
+coins_side = [random.randint(0, 1) for i in range(n_coins)] # позиция монет: 0 - орлом, 1 - решкой
+print(coins_side)
 orel = 0 # количество поворотов орлов, для решек
 reshka = 0 # количество поворотов решек, для орлов
-for i in range(len(what_side)):
-    if what_side[i] == 0:
-        orel += 1
-    elif what_side[i] == 1:
-        reshka += 1
+for i in range(len(coins_side)):
+    if coins_side[i] == 0: orel += 1
+    elif coins_side[i] == 1: reshka += 1
 print("Переверните: ", min(orel,reshka), " для выполнения задачи.")
